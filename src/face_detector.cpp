@@ -10,7 +10,7 @@ public:
     FaceDetector()
     : Node("face_detector")
     {
-        // Astraカメラのイメージトピックに合わせて変更してください
+        // カメラのイメージトピックに合わせて変更してください
         subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
             "/image_raw", // サブスクライブするトピックに合わせて変更する
             10,
@@ -50,6 +50,9 @@ private:
 
         if (!faces.empty()) {
             RCLCPP_INFO(this->get_logger(), "顔検知");
+        }
+        else if(faces.empty()) {
+            RCLCPP_WARN(this->get_logger(), "顔未検知");
         }
 
         // （オプション）検出した顔に矩形を描画して表示
