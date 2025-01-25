@@ -22,10 +22,10 @@ include_directories(
 add_executable(face_detector src/face_detector.cpp)
 
 # 必要なライブラリのリンク
-ament_cmake_export_dependencies(face_detector
+ament_target_dependencies(face_detector
   rclcpp
   sensor_msgs
-  cv_bridage
+  cv_bridge
   OpenCV
 )
 
