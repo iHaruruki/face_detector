@@ -19,10 +19,10 @@ include_directories(
 )
 
 # 実行可能ファイルの追加
-add_executable(face_detector src/face_detector.cpp)
+add_executable(face_detector_node src/face_detector.cpp)
 
 # 必要なライブラリのリンク
-ament_target_dependencies(face_detector
+ament_target_dependencies(face_detector_node
   rclcpp
   sensor_msgs
   cv_bridge
@@ -31,7 +31,7 @@ ament_target_dependencies(face_detector
 
 # インストール設定
 install(TARGETS
-  face_detector
+  face_detector_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
