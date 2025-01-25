@@ -12,7 +12,7 @@ public:
     {
         // Astraカメラのイメージトピックに合わせて変更してください
         subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-            "/astra_camera/image_raw",
+            "/image_raw", // サブスクライブするトピックに合わせて変更する
             10,
             std::bind(&FaceDetector::image_callback, this, std::placeholders::_1)
         );
