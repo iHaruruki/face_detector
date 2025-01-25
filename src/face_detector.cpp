@@ -19,7 +19,7 @@ public:
 
         // Haar Cascadeの分類器をロード
         // face_detector.cppでは、cv::samples::findFileを使用してファイルを検索していますが、環境によってはパスを明示的に指定する必要があります.
-        if (!face_cascade_.load(cv::samples::findFile("haarcascade_frontalface_default.xml"))) {
+        if (!face_cascade_.load(cv::samples::findFile("/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml"))) {
             RCLCPP_ERROR(this->get_logger(), "Haar Cascade XMLファイルのロードに失敗しました。");
             throw std::runtime_error("Haar Cascade XMLファイルのロードに失敗");
         }
