@@ -19,7 +19,7 @@ $ source install/setup.bash
 ```
 ## 使い方
 ```
-$ ros2 run face_detection_node_cpp face_detector
+$ ros2 run face_detector face_detector_node
 ```
 ### 注意
 face_detector.cpp 内のサブスクリプション部分で使用しているトピック名 /astra_camera/image_raw は、実際に使用しているトピック名と一致している必要があります。異なる場合は、以下のコマンドで現在のトピックを確認し、適切なトピック名に変更してください。
