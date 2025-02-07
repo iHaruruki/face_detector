@@ -8,8 +8,8 @@ flowchart LR
 ```
 $ sudo apt-get update # パッケージリストを更新
 $ sudo apt-get install libopencv-dev # OpenCVのインストール
-$ sudo apt-get install ros-humble-cv-bridge # cv_bridgeのインストール
-$ sudo apt-get install ros-humble-image-transport # image_transportのインストール（オプション）
+$ sudo apt install ros-humble-cv-bridge # cv_bridgeのインストール
+$ sudo apt install ros-humble-image-transport # image_transportのインストール（オプション）
 
 $ cd ~/ros2_ws/src  #Go to ros workspace
 $ git clone https://github.com/iHaruruki/face_detector.git #clone this package
