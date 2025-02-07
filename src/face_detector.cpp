@@ -12,7 +12,7 @@ public:
     {
         // カメラのイメージトピックに合わせて変更してください
         subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
-            "/image_raw", // サブスクライブするトピックに合わせて変更する
+            "camera/color/image_raw", // サブスクライブするトピックに合わせて変更する
             10,
             std::bind(&FaceDetector::image_callback, this, std::placeholders::_1)
         );
